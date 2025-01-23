@@ -1,0 +1,9 @@
+{
+    "messages" : "Hello world",
+    "e-commerce-application" : "E-commerce application",
+    "error" : "Error",
+    "fallback-error-message" : "Something went wrong",
+    "not-found-message" : "This page was not found 😔",
+    "try-again" : "Try again",
+    "back-to-home" : "Back Home"
+}

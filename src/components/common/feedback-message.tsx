@@ -1,0 +1,18 @@
+import { AlertCircle } from "lucide-react";
+
+
+type FeedbackMessageProps = {
+    children ?: React.ReactNode
+}
+
+const FeedbackMessage = ({children} : FeedbackMessageProps) => {
+
+    if(!children) return null
+    return (
+        <p className="text-center text-red-500 items-center gap-1 font-semibold text-sm justify-center">
+            <AlertCircle size={15} /> {children}
+        </p>
+    )
+}
+
+export default FeedbackMessage;
