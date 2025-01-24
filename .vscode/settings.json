@@ -1,5 +1,4 @@
 {
-    "i18n-ally.localesPaths": [
-        "src/app/i18n"
-    ]
+  "i18n-ally.localesPaths": ["src/i18n/messages"],
+  "i18n-ally.keystyle": "flat"
 }

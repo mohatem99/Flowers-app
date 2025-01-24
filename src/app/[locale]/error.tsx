@@ -1,26 +1,28 @@
-'use client'
+"use client";
 
+import ErrorComponent from "@/components/common/error-component";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 
-const Error = ({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) => {
+export default function Error({
+  error,
+  reset,
+}: {
+  error: Error & { digest?: string };
+  reset: () => void;
+}) {
+  // Translation
+  const t = useTranslations();
 
-    const t = useTranslations()
+  return (
+    <main className="min-h-screen flex flex-col justify-center items-center">
+      {/* Message */}
+      <ErrorComponent>{error.message}</ErrorComponent>
 
-    return (
-        <html>
-            <body>
-                <main className="min-h-screen grid place-items-center">
-                    <div>
-                        <h1 className="text-red-500 text-5xl font-bold">{t('error')} {error.message}</h1>
-                        <div className="mt-4 flex justify-center">
-                        <Button variant='destructive' onClick={() => reset()}>{t('try-again')}</Button>
-                        </div>
-                    </div>
-                </main>
-            </body>
-        </html>
-    )
+      {/* Try again */}
+      <div className="mt-12 flex justify-center">
+        <Button onClick={() => reset()}>{t("try-again")}</Button>
+      </div>
+    </main>
+  );
 }
-
-export default Error
