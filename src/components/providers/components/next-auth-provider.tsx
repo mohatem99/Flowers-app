@@ -1,7 +1,6 @@
-'use client'
+"use client";
 
 import { SessionProvider } from "next-auth/react";
-
 
 type NextAuthProviderProps = {
   children: React.ReactNode;

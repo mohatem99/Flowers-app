@@ -1,29 +1,21 @@
-import { Button } from "@/components/ui/button"
-import { useTranslations } from "next-intl"
-import Link from "next/link"
+import NotFoundComponent from "@/components/common/not-found-component";
+import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
 
-const NotFound = () => {
+export default function NotFound() {
+  // Translation
+  const t = useTranslations();
 
-    const t = useTranslations()
+  return (
+    <main className="min-h-screen flex-col flex items-center justify-center gap-12">
+      {/* Message */}
+      <NotFoundComponent />
 
-    return (
-        <html>
-            <body>
-                <main className="min-h-screen grid place-items-center items-center">
-                    <div>
-                        <h1 className="text-4xl text-red-500 font-bold">{t('not-found-message')}</h1>
-                        <div className="flex justify-center">
-                        <Button className=" mt-5" variant='destructive' asChild>
-                            <Link href="/">
-                                {t('back-to-home')}
-                            </Link>
-                        </Button>
-                        </div>
-                    </div>
-                </main>
-            </body>
-        </html>
-    )
+      {/* Homepage link */}
+      <Button className=" mt-5" asChild>
+        <Link href="/">{t("back-to-home")}</Link>
+      </Button>
+    </main>
+  );
 }
-
-export default NotFound
