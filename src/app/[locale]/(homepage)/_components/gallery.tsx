@@ -1,13 +1,16 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 function Gallery() {
+  // Translation
+  const t = useTranslations();
   return (
     <section className="w-[1280px] mx-auto">
       <h2
         className="uppercase 
       text-center text-custom-rose-900 text-lg font-bold font-roboto tracking-[4px]"
       >
-        Our Gallery
+        {t("our-gallery")}
       </h2>
       <div className="mt-2 flex justify-center ">
         <h3
@@ -22,7 +25,7 @@ function Gallery() {
            after:left-0
            after:bottom-0 after:-z-10 after:rounded-r-2xl"
         >
-          Let's Check Our Photo Gallery
+          {t("lets-check-our-photo-gallery")}
         </h3>
       </div>
 

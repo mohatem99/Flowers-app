@@ -27,7 +27,7 @@ function TestmonialCard() {
       <p
         className="
       mt-5 
-      text-custom-blue-500 text-sm font-normal font-inter"
+      text-custom-blue-500 text-sm font-normal font-inter capitalize"
       >
         Ab vel consequatur repellat eos omnis accusamus porro sunt dolorem. Totam voluptas ullam ut.
         Neque accusantium voluptas rerum. Dolorem veritatis quo omnis nihil nulla harum eum.

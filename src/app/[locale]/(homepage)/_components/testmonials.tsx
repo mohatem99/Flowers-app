@@ -46,7 +46,7 @@ function Testmonials() {
       {" "}
       <div className="">
         <Carousel setApi={setApi} className=" w-[1280px] mx-auto  ">
-          <CarouselContent className="m-0   justify-between gap-6  ">
+          <CarouselContent className="m-0 justify-between gap-6  ">
             {Array.from({ length: 15 }, (_, index) => (
               <CarouselItem key={index} className="max-w-[302px] pl-0">
                 <TestmonialCard />

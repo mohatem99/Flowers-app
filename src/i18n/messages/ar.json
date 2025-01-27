@@ -1,9 +1,14 @@
 {
-    "messages" : "هلا هلا",
-    "e-commerce-application" : "متجر فلاور الإلكتروني",
-    "error" : "حدث خطأ",
-    "fallback-error-message" : "😔 حدث خطأ ما  ",
-    "not-found-message" : "😔 لم يتم العثور علي هذه الصفحه ",
-    "try-again" : "حاول مجددا",
-    "back-to-home" : "عد الي الصفحه الرئيسيه"
+  "messages": "هلا هلا",
+  "e-commerce-application": "متجر فلاور الإلكتروني",
+  "error": "حدث خطأ",
+  "fallback-error-message": "😔 حدث خطأ ما  ",
+  "not-found-message": "😔 لم يتم العثور علي هذه الصفحه ",
+  "try-again": "حاول مجددا",
+  "back-to-home": "عد الي الصفحه الرئيسيه",
+  "less-than-span-classname-underline-underline-offset-8-decoration-custom-rose-900-greater-than-trusted-by-less-than-span-greater-than-over-less-than-span-classname-text-custom-rose-900-greater-than-4-5k-less-than-span-greater-than-companies": "<span className = \"Underline Offset-8 Decoration-Custom-Rose-900\"> موثوق به بواسطة </span> {\"\"} Over <span className = \"Text-Custom-Rose-900\"> 4.5k </span \n> الشركات",
+  "less-than-span-greater-than-4-5k-less-than-span-greater-than-companies": "<span>4.5 ألف </span> شركة",
+  "less-than-span-greater-than-trusted-by-less-than-span-greater-than-over": "<span>موثوق به</span> قبل ",
+  "our-gallery": "معرضنا",
+  "lets-check-our-photo-gallery": "دعونا نتحقق من معرض الصور الخاص بنا"
 }
