@@ -6,9 +6,8 @@
   "not-found-message": "This page was not found 😔",
   "try-again": "Try again",
   "back-to-home": "Back Home",
-  "less-than-span-classname-underline-underline-offset-8-decoration-custom-rose-900-greater-than-trusted-by-less-than-span-greater-than-over-less-than-span-classname-text-custom-rose-900-greater-than-4-5k-less-than-span-greater-than-companies": "<span className=\" underline underline-offset-8 decoration-custom-rose-900\"> Trusted by </span>{\" \"} over <span className=\"text-custom-rose-900\">4.5k+</span> companies",
-  "less-than-span-greater-than-trusted-by-less-than-span-greater-than-over": "<span>Trusted by</span> over ",
-  "less-than-span-greater-than-4-5k-less-than-span-greater-than-companies": "<span>4.5k+</span> companies",
   "our-gallery": "Our Gallery",
-  "lets-check-our-photo-gallery": "Let's Check Our Photo Gallery"
+  "lets-check-our-photo-gallery": "Let's Check Our Photo Gallery",
+  "companies-header": "<span>Trusted by</span> over ",
+  "companies-number-of-companies": "<span>4.5k+</span> companies"
 }
