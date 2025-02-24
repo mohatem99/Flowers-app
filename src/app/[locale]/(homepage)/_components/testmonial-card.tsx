@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { Star } from "lucide-react";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 
-//types
+// Types
 type TestMonialCardProps = {
   imageSrc: string;
   name: string;
@@ -10,9 +10,6 @@ type TestMonialCardProps = {
   comment: string;
   type: string;
 };
-
-//This component will not have translations because the
-//  component only provides  display data from api
 
 export default function TestmonialCard({
   name,
@@ -25,7 +22,7 @@ export default function TestmonialCard({
   const t = useTranslations();
 
   return (
-    <div className=" h-[344px] bg-white rounded-[100px] rounded-tl-[50px] p-6">
+    <div className="h-[344px] bg-white rounded-[100px] p-6 rtl:rounded-tr-[50px] ltr:rounded-tl-[50px]">
       <div className=" flex gap-4 items-center">
         <div className=" w-[50px] h-[50px] relative ">
           {/* Customer Profile Image */}
@@ -54,31 +51,26 @@ export default function TestmonialCard({
       <div className="h-[.5px] w-full bg-custom-blue-500 mt-5" />
 
       {/* Customer comment */}
-      <p className="mt-5 text-custom-blue-500 text-sm font-normal font-inter capitalize">
+      <p className="mt-5 text-custom-blue-500 text-sm font-normal font-inter capitalize h-28">
         {comment}
       </p>
-      <div className="flex items-center justify-between relative">
+      <div className="mt-3 flex items-center justify-between">
         {/* Customer Rating */}
-        <div className="flex gap-1 ">
+        <div className="flex gap-1">
           {Array.from({ length: rating }).map((_, i) => (
-            <Star fill="#F82BA9" color="#F82BA9" size={15} key={i} />
+            <Star className="text-custom-rose-900" fill="currentColor" size={15} key={i} />
           ))}
         </div>
 
-        <div className="w-[50px] h-[50px] relative">
-          <Image
-            src="/assets/icons/text-circle.svg"
-            alt=""
-            width={50}
-            height={50}
-            className="absolute right-1/2 top-1/4 "
-          />
+        {/* Customer Svgs */}
+        <div className="flex-1 flex justify-end rtl:justify-start rtl:flex-row-reverse">
+          <Image src="/assets/icons/text-circle.svg" alt="" width={50} height={50} />
           <Image
             src="/assets/icons/half-circle.svg"
             alt=""
             width={50}
             height={50}
-            className="absolute"
+            className="-ml-5 -mt-5"
           />
         </div>
       </div>
