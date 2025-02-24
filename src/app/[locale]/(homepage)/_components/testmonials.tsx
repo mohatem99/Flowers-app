@@ -68,8 +68,12 @@ import { type CarouselApi } from "@/components/ui/carousel";
 import { useEffect, useState } from "react";
 import TestmonialCard from "./testmonial-card";
 import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
 
-function Testmonials() {
+export default function Testmonials() {
+  //Locales
+  const locale = useLocale();
+
   //State
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
@@ -98,7 +102,7 @@ function Testmonials() {
   }, [api]);
 
   return (
-    <div className="p-[80px] relative overflow-hidden">
+    <div dir={locale === "ar" ? "rtl" : "ltr"} className="p-[80px] relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
         {/* Background Image */}
         <Image
@@ -113,8 +117,12 @@ function Testmonials() {
       </div>
       <div>
         {/* Carsoule Content */}
-        <Carousel setApi={setApi} className=" w-[1280px] mx-auto ">
-          <CarouselContent className="m-0 justify-between gap-6  ">
+        <Carousel
+          setApi={setApi}
+          className="w-[1280px] mx-auto"
+          opts={{ direction: locale === "ar" ? "rtl" : "ltr" }}
+        >
+          <CarouselContent className="m-0 justify-between gap-6">
             {testimonialsData.map((item, index) => (
               <CarouselItem key={index} className="max-w-[302px] pl-0">
                 <TestmonialCard {...item} />
@@ -125,7 +133,7 @@ function Testmonials() {
           <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 bg-custom-rose-900 text-white"></CarouselNext>
         </Carousel>
         {/* Pagination */}
-        <div className=" flex gap-2 justify-center mt-10 ">
+        <div className=" flex gap-2 justify-center mt-10">
           <div className="h-4 w-4 rounded-full bg-white" onClick={scrolltoFirstPage}></div>
           <div className="h-4 w-9 rounded-lg bg-white" onClick={scrolltoLastPage}></div>
         </div>
@@ -133,5 +141,3 @@ function Testmonials() {
     </div>
   );
 }
-
-export default Testmonials;

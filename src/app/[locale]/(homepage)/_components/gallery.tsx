@@ -12,12 +12,11 @@ export default function Gallery() {
         {t("our-gallery")}
       </h2>
 
-      <div className="mt-2 flex justify-center ">
+      <div className="mt-2 flex justify-center">
         {/* Main Heading with Decorative Elements */}
         <h3
           className="relative font-inter text-3xl font-bold capitalize text-custom-blue-900
-          before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-[150px]
-        before:bg-custom-rose-900 before:content-['']
+          before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-[150px] before:bg-custom-rose-900 before:content-['']
           after:absolute after:bottom-0 after:left-0 after:-z-10 after:h-[17px]
           after:w-[338px] after:rounded-r-2xl after:bg-[#FEEDF7] after:content-['']"
         >

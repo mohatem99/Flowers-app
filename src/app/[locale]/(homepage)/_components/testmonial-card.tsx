@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Star } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 
 //types
 type TestMonialCardProps = {
@@ -20,22 +21,26 @@ export default function TestmonialCard({
   rating,
   type,
 }: TestMonialCardProps) {
+  // Translation
+  const t = useTranslations();
+
   return (
     <div className=" h-[344px] bg-white rounded-[100px] rounded-tl-[50px] p-6">
       <div className=" flex gap-4 items-center">
-        <div className=" w-[50px] h-[50px] relative">
+        <div className=" w-[50px] h-[50px] relative ">
           {/* Customer Profile Image */}
           <Image
-            className="rounded-full object-cover "
-            src="/assets/imges/Ellipse 2.png"
-            alt="Profile"
+            className="rounded-full object-cover w-full h-full"
             width={50}
             height={50}
+            src="/assets/imges/customer-pic.jpg"
+            alt={t("profile-image")}
           />
+
           {/* Profile border */}
           <div
             className="absolute rounded-full border-4 border-transparent 
-            border-l-custom-rose-900  border-b-custom-rose-900 -inset-1"
+            border-l-custom-rose-900 border-b-custom-rose-900 -inset-1"
           ></div>
         </div>
         <div>
@@ -52,25 +57,28 @@ export default function TestmonialCard({
       <p className="mt-5 text-custom-blue-500 text-sm font-normal font-inter capitalize">
         {comment}
       </p>
-      <div className="flex justify-between items-center">
-        <div>
-          {/* Customer Rating */}
-          <div className="flex gap-1 ">
-            {Array.from({ length: rating }).map((_, i) => (
-              <Star fill="#F82BA9" color="#F82BA9" size={15} key={i} />
-            ))}
-          </div>
+      <div className="flex items-center justify-between relative">
+        {/* Customer Rating */}
+        <div className="flex gap-1 ">
+          {Array.from({ length: rating }).map((_, i) => (
+            <Star fill="#F82BA9" color="#F82BA9" size={15} key={i} />
+          ))}
         </div>
-        <div className=" w-[50px] h-[50px] relative">
-          <img
+
+        <div className="w-[50px] h-[50px] relative">
+          <Image
             src="/assets/icons/text-circle.svg"
             alt=""
-            className=" w-[50px] h-[50px] absolute right-1/2 top-1/4 "
+            width={50}
+            height={50}
+            className="absolute right-1/2 top-1/4 "
           />
-          <img
+          <Image
             src="/assets/icons/half-circle.svg"
             alt=""
-            className=" w-[50px] h-[50px] absolute "
+            width={50}
+            height={50}
+            className="absolute"
           />
         </div>
       </div>
