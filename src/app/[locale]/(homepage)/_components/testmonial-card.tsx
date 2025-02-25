@@ -22,9 +22,9 @@ export default function TestmonialCard({
   const t = useTranslations();
 
   return (
-    <div className="h-[344px] bg-white rounded-[100px] p-6 rtl:rounded-tr-[50px] ltr:rounded-tl-[50px]">
-      <div className=" flex gap-4 items-center">
-        <div className=" w-[50px] h-[50px] relative ">
+    <div className="h-80 bg-white rounded-[6.25rem] p-6 rtl:rounded-tr-3xl ltr:rounded-tl-3xl">
+      <div className="flex gap-4 items-center">
+        <div className="w-12 h-12 relative ">
           {/* Customer Profile Image */}
           <Image
             className="rounded-full object-cover w-full h-full"
@@ -48,13 +48,13 @@ export default function TestmonialCard({
           <p className="text-custom-rose-900 text-lg font-bold font-inter">{type}</p>
         </div>
       </div>
-      <div className="h-[.5px] w-full bg-custom-blue-500 mt-5" />
+      <div className="border-t w-full bg-custom-blue-500 mt-5" />
 
       {/* Customer comment */}
       <p className="mt-5 text-custom-blue-500 text-sm font-normal font-inter capitalize h-28">
         {comment}
       </p>
-      <div className="mt-3 flex items-center justify-between">
+      <div className="mt-1 flex items-center justify-between">
         {/* Customer Rating */}
         <div className="flex gap-1">
           {Array.from({ length: rating }).map((_, i) => (

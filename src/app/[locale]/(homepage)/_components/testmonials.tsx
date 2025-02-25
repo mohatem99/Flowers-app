@@ -99,7 +99,7 @@ export default function Testmonials() {
   }, [api]);
 
   return (
-    <div dir={locale === "ar" ? "rtl" : "ltr"} className="p-[80px] relative overflow-hidden">
+    <div className="p-20 relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
         {/* Background Image */}
         <Image
@@ -109,7 +109,6 @@ export default function Testmonials() {
           priority
           quality={100}
           className="object-cover object-center"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 100vw"
         />
       </div>
 
@@ -118,12 +117,12 @@ export default function Testmonials() {
         {/* Carsoule Content */}
         <Carousel
           setApi={setApi}
-          className="w-[1280px] mx-auto"
+          className="container mx-auto"
           opts={{ direction: locale === "ar" ? "rtl" : "ltr" }}
         >
           <CarouselContent className="m-0 justify-between gap-6">
             {testimonialsData.map((item, index) => (
-              <CarouselItem key={index} className="max-w-[302px] pl-0">
+              <CarouselItem key={index} className="max-w-80 pl-0">
                 <TestmonialCard {...item} />
               </CarouselItem>
             ))}

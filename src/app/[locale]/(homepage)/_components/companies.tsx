@@ -7,7 +7,7 @@ export default function Companies() {
 
   return (
     <section className="py-10">
-      <div className="w-[1280px] bg-[#FEEDF7] py-10 px-6 mx-auto rounded-[20px]">
+      <div className=" container bg-[#FEEDF7] py-10 px-6 mx-auto rounded-2xl">
         {/* Header */}
         <h3 className=" text-center font-inter font-bold text-3xl capitalize ">
           {/*  First part: "Trusted by" with an underlined span.
